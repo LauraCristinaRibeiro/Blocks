@@ -1,6 +1,6 @@
 # 🎮 Blocks
 
-[Godot Engine](https://shields.io)
+![Godot Engine](https://shields.io)
 [Language](https://shields.io)
 [Version](https://shields.io)
 
