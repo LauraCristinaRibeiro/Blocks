@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtlt3nd7a88xe"]
+
+[ext_resource type="Texture2D" uid="uid://bkvis3t0looux" path="res://Sprites/BackgroundMenu/3 - Cloud_cover_1.png" id="1_4pb6k"]
+[ext_resource type="Texture2D" uid="uid://bffxaej5b27g7" path="res://Sprites/BackgroundMenu/5 - Sky_color.png" id="1_f3jlp"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Titulo" type="Label" parent="."]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 129.0
+offset_right = 361.0
+offset_bottom = 184.0
+theme_override_font_sizes/font_size = 40
+text = "Blocks"
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.9, 0.9)
+
+[node name="cloud" type="Sprite2D" parent="Parallax2D"]
+z_index = 2
+texture = ExtResource("1_4pb6k")
+region_rect = Rect2(288, 208, 576, 208)
+
+[node name="sky" type="Sprite2D" parent="Parallax2D"]
+texture = ExtResource("1_f3jlp")

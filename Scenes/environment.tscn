@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://bxp3cgce714d8"]
+
+[ext_resource type="Texture2D" uid="uid://cir637wn74tey" path="res://Sprites/Background.png" id="1_mtr2i"]
+[ext_resource type="Script" path="res://Scripts/environment.gd" id="1_pxfhr"]
+[ext_resource type="PackedScene" uid="uid://e02ir51c87si" path="res://Scenes/hud.tscn" id="3_d3vyn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0jaik"]
+size = Vector2(750, 62)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jc60w"]
+size = Vector2(55, 570)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_grbw4"]
+size = Vector2(53, 576)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_440jw"]
+size = Vector2(751, 59)
+
+[node name="Environment" type="Node2D"]
+script = ExtResource("1_pxfhr")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_mtr2i")
+centered = false
+
+[node name="TopWall" type="StaticBody2D" parent="."]
+position = Vector2(-37, -49)
+collision_layer = 32
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TopWall"]
+position = Vector2(354, 17)
+shape = SubResource("RectangleShape2D_0jaik")
+debug_color = Color(0.157211, 0.682943, 0.794048, 0.42)
+
+[node name="LeftWall" type="StaticBody2D" parent="."]
+position = Vector2(-11, 2)
+collision_layer = 32
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
+position = Vector2(-17.5, 225)
+shape = SubResource("RectangleShape2D_jc60w")
+
+[node name="RightWall" type="StaticBody2D" parent="."]
+position = Vector2(651, 7)
+collision_layer = 32
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
+position = Vector2(16.5, 221)
+shape = SubResource("RectangleShape2D_grbw4")
+
+[node name="DeathZone" type="Area2D" parent="."]
+position = Vector2(10, 485)
+collision_layer = 64
+collision_mask = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2(309, 26)
+shape = SubResource("RectangleShape2D_440jw")
+debug_color = Color(0.942816, 0.312445, 0.363292, 0.42)
+
+[node name="TimerReset" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("3_d3vyn")]
+
+[connection signal="body_entered" from="DeathZone" to="." method="_on_death_zone_body_entered"]
+[connection signal="timeout" from="TimerReset" to="." method="_on_timer_reset_timeout"]

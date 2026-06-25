@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://e02ir51c87si"]
+
+[ext_resource type="Script" path="res://Scripts/hud.gd" id="1_f6xlb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6ax2q"]
+font_size = 20
+font_color = Color(0.114897, 0.114897, 0.114897, 1)
+shadow_size = 4
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_f6xlb")
+
+[node name="LabelPoints" type="Label" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 7.0
+offset_right = 188.0
+offset_bottom = 35.0
+text = "Pontos:"
+label_settings = SubResource("LabelSettings_6ax2q")
+
+[node name="LabelRecord" type="Label" parent="."]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 8.0
+offset_right = 389.0
+offset_bottom = 36.0
+text = "Recorde:"
+label_settings = SubResource("LabelSettings_6ax2q")
+
+[node name="LabelLives" type="Label" parent="."]
+layout_mode = 0
+offset_left = 483.0
+offset_top = 6.0
+offset_right = 607.0
+offset_bottom = 34.0
+text = "Vida:"
+label_settings = SubResource("LabelSettings_6ax2q")

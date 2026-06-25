@@ -1,0 +1,258 @@
+[gd_scene load_steps=10 format=3 uid="uid://cl03q1iyypc0r"]
+
+[ext_resource type="PackedScene" uid="uid://bxp3cgce714d8" path="res://Scenes/environment.tscn" id="1_repo5"]
+[ext_resource type="PackedScene" uid="uid://lsbs0sw6ps8k" path="res://Scenes/player.tscn" id="2_goiuc"]
+[ext_resource type="PackedScene" uid="uid://dv2rebi22rje6" path="res://Scenes/ball.tscn" id="3_lkr7u"]
+[ext_resource type="PackedScene" uid="uid://b4motxx3bcg8d" path="res://Scenes/block.tscn" id="4_pe0hw"]
+[ext_resource type="Texture2D" uid="uid://cp7y8dtoconnc" path="res://Sprites/RedBlock.png" id="5_dxt4q"]
+[ext_resource type="Texture2D" uid="uid://2yhrfmwmng3h" path="res://Sprites/GreenBlock.png" id="6_jilx5"]
+[ext_resource type="Texture2D" uid="uid://jjyhv7d4v8n3" path="res://Sprites/BlueBlock.png" id="7_c0bhp"]
+[ext_resource type="Texture2D" uid="uid://mjfff66wtcnm" path="res://Sprites/YellowBlock.png" id="8_bjals"]
+[ext_resource type="AudioStream" uid="uid://cpfavtcb6s7eo" path="res://Sounds/level1.ogg" id="9_ptfbf"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Environment" parent="." instance=ExtResource("1_repo5")]
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("2_goiuc")]
+position = Vector2(320, 425)
+
+[node name="Ball" parent="." instance=ExtResource("3_lkr7u")]
+position = Vector2(321, 400)
+
+[node name="RedBlock" type="Node2D" parent="."]
+
+[node name="Block" parent="RedBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(0, 120)
+
+[node name="Sprite2D" type="Sprite2D" parent="RedBlock/Block"]
+texture = ExtResource("5_dxt4q")
+centered = false
+
+[node name="Block2" parent="RedBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(80, 120)
+
+[node name="Sprite2D" type="Sprite2D" parent="RedBlock/Block2"]
+texture = ExtResource("5_dxt4q")
+centered = false
+
+[node name="Block3" parent="RedBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(160, 120)
+
+[node name="Sprite2D" type="Sprite2D" parent="RedBlock/Block3"]
+texture = ExtResource("5_dxt4q")
+centered = false
+
+[node name="Block4" parent="RedBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(240, 120)
+
+[node name="Sprite2D" type="Sprite2D" parent="RedBlock/Block4"]
+texture = ExtResource("5_dxt4q")
+centered = false
+
+[node name="Block5" parent="RedBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(320, 120)
+
+[node name="Sprite2D" type="Sprite2D" parent="RedBlock/Block5"]
+texture = ExtResource("5_dxt4q")
+centered = false
+
+[node name="Block6" parent="RedBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(400, 120)
+
+[node name="Sprite2D" type="Sprite2D" parent="RedBlock/Block6"]
+texture = ExtResource("5_dxt4q")
+centered = false
+
+[node name="Block7" parent="RedBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(480, 120)
+
+[node name="Sprite2D" type="Sprite2D" parent="RedBlock/Block7"]
+texture = ExtResource("5_dxt4q")
+centered = false
+
+[node name="Block8" parent="RedBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(560, 120)
+
+[node name="Sprite2D" type="Sprite2D" parent="RedBlock/Block8"]
+texture = ExtResource("5_dxt4q")
+centered = false
+
+[node name="GreenBlock" type="Node2D" parent="."]
+
+[node name="Block" parent="GreenBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(0, 96)
+
+[node name="Sprite2D" type="Sprite2D" parent="GreenBlock/Block"]
+texture = ExtResource("6_jilx5")
+centered = false
+
+[node name="Block2" parent="GreenBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(80, 96)
+
+[node name="Sprite2D" type="Sprite2D" parent="GreenBlock/Block2"]
+texture = ExtResource("6_jilx5")
+centered = false
+
+[node name="Block3" parent="GreenBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(160, 96)
+
+[node name="Sprite2D" type="Sprite2D" parent="GreenBlock/Block3"]
+texture = ExtResource("6_jilx5")
+centered = false
+
+[node name="Block4" parent="GreenBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(240, 96)
+
+[node name="Sprite2D" type="Sprite2D" parent="GreenBlock/Block4"]
+texture = ExtResource("6_jilx5")
+centered = false
+
+[node name="Block5" parent="GreenBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(320, 96)
+
+[node name="Sprite2D" type="Sprite2D" parent="GreenBlock/Block5"]
+texture = ExtResource("6_jilx5")
+centered = false
+
+[node name="Block6" parent="GreenBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(400, 96)
+
+[node name="Sprite2D" type="Sprite2D" parent="GreenBlock/Block6"]
+texture = ExtResource("6_jilx5")
+centered = false
+
+[node name="Block7" parent="GreenBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(480, 96)
+
+[node name="Sprite2D" type="Sprite2D" parent="GreenBlock/Block7"]
+texture = ExtResource("6_jilx5")
+centered = false
+
+[node name="Block8" parent="GreenBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(560, 96)
+
+[node name="Sprite2D" type="Sprite2D" parent="GreenBlock/Block8"]
+texture = ExtResource("6_jilx5")
+centered = false
+
+[node name="BlueBlock" type="Node2D" parent="."]
+
+[node name="Block" parent="BlueBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(0, 72)
+
+[node name="Sprite2D" type="Sprite2D" parent="BlueBlock/Block"]
+texture = ExtResource("7_c0bhp")
+centered = false
+
+[node name="Block2" parent="BlueBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(80, 72)
+
+[node name="Sprite2D" type="Sprite2D" parent="BlueBlock/Block2"]
+texture = ExtResource("7_c0bhp")
+centered = false
+
+[node name="Block3" parent="BlueBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(160, 72)
+
+[node name="Sprite2D" type="Sprite2D" parent="BlueBlock/Block3"]
+texture = ExtResource("7_c0bhp")
+centered = false
+
+[node name="Block4" parent="BlueBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(240, 72)
+
+[node name="Sprite2D" type="Sprite2D" parent="BlueBlock/Block4"]
+texture = ExtResource("7_c0bhp")
+centered = false
+
+[node name="Block5" parent="BlueBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(320, 72)
+
+[node name="Sprite2D" type="Sprite2D" parent="BlueBlock/Block5"]
+texture = ExtResource("7_c0bhp")
+centered = false
+
+[node name="Block6" parent="BlueBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(400, 72)
+
+[node name="Sprite2D" type="Sprite2D" parent="BlueBlock/Block6"]
+texture = ExtResource("7_c0bhp")
+centered = false
+
+[node name="Block7" parent="BlueBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(480, 72)
+
+[node name="Sprite2D" type="Sprite2D" parent="BlueBlock/Block7"]
+texture = ExtResource("7_c0bhp")
+centered = false
+
+[node name="Block8" parent="BlueBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(560, 72)
+
+[node name="Sprite2D" type="Sprite2D" parent="BlueBlock/Block8"]
+texture = ExtResource("7_c0bhp")
+centered = false
+
+[node name="YellowBlock" type="Node2D" parent="."]
+
+[node name="Block" parent="YellowBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(0, 48)
+
+[node name="Sprite2D" type="Sprite2D" parent="YellowBlock/Block"]
+texture = ExtResource("8_bjals")
+centered = false
+
+[node name="Block2" parent="YellowBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(80, 48)
+
+[node name="Sprite2D" type="Sprite2D" parent="YellowBlock/Block2"]
+texture = ExtResource("8_bjals")
+centered = false
+
+[node name="Block3" parent="YellowBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(160, 48)
+
+[node name="Sprite2D" type="Sprite2D" parent="YellowBlock/Block3"]
+texture = ExtResource("8_bjals")
+centered = false
+
+[node name="Block4" parent="YellowBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(240, 48)
+
+[node name="Sprite2D" type="Sprite2D" parent="YellowBlock/Block4"]
+texture = ExtResource("8_bjals")
+centered = false
+
+[node name="Block5" parent="YellowBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(320, 48)
+
+[node name="Sprite2D" type="Sprite2D" parent="YellowBlock/Block5"]
+texture = ExtResource("8_bjals")
+centered = false
+
+[node name="Block6" parent="YellowBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(400, 48)
+
+[node name="Sprite2D" type="Sprite2D" parent="YellowBlock/Block6"]
+texture = ExtResource("8_bjals")
+centered = false
+
+[node name="Block7" parent="YellowBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(480, 48)
+
+[node name="Sprite2D" type="Sprite2D" parent="YellowBlock/Block7"]
+texture = ExtResource("8_bjals")
+centered = false
+
+[node name="Block8" parent="YellowBlock" instance=ExtResource("4_pe0hw")]
+position = Vector2(560, 48)
+
+[node name="Sprite2D" type="Sprite2D" parent="YellowBlock/Block8"]
+texture = ExtResource("8_bjals")
+centered = false
+
+[node name="AudioBg" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_ptfbf")
+autoplay = true
