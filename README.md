@@ -1,8 +1,8 @@
 # 🎮 Blocks
 
-![Godot Engine](https://shields.io)
-![Language](https://shields.io)
-![Version](https://shields.io)
+[Godot Engine](https://shields.io)
+[Language](https://shields.io)
+[Version](https://shields.io)
 
 **Blocks** é um jogo arcade minimalista desenvolvido na Godot Engine 4.3. O objetivo central da jogabilidade é desafiar o jogador a destruir blocos na tela para avançar e pontuar.
 
@@ -21,13 +21,6 @@
 * **Engine**: Godot Engine 4.3
 * **Linguagem**: GDScript
 
----
-
-## 🎮 Como Jogar
-
-1. Baixe o executável na aba **Releases**.
-2. Inicie o jogo.
-3. Use os comandos para estourar os blocos.
 
 ---
 
